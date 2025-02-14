@@ -3,7 +3,7 @@ let isLocked = false;
 
 async function startThread() {
     try {
-        const response = await fetch('https://render-test2-90nl.onrender.com/start');
+        const response = await fetch('https://nova-gorica-deploy.onrender.com/start');
         const data = await response.json();
         threadId = data.thread_id;
     } catch (error) {
@@ -27,7 +27,7 @@ async function sendMessage() {
     if (!threadId) await startThread();
 
     try {
-        const response = await fetch('https://render-test2-90nl.onrender.com/chat', {
+        const response = await fetch('https://nova-gorica-deploy.onrender.com/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
